@@ -1,0 +1,36 @@
+.list-item {
+  background:  #8af4cf;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 180;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.list-item:hover {
+  background-color: #ffa300;
+  transform: scale(1.1);
+}
+
+.avatar {
+  width: 145px;
+}
+
+.robot-info {
+  text-align : center;
+}
+
+.name {
+  font-weight: bold;
+  line-height: 0;
+}
+
+.email {
+  font-size: 10px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}

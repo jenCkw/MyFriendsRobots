@@ -1,11 +1,12 @@
-.list-item {
-  background:  #8af4cf;
+.list-robots {
+  background: #8af4cf;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 180;
+  width: 170px;
   padding: 1em;
   cursor: pointer;
+  
 }
 
 .list-item:hover {
@@ -13,12 +14,17 @@
   transform: scale(1.1);
 }
 
-.avatar {
+.robot-avatar {
   width: 145px;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 .robot-info {
-  text-align : center;
+  text-align: center;
 }
 
 .name {
@@ -28,9 +34,4 @@
 
 .email {
   font-size: 10px;
-}
-
-img {
-  width: 100%;
-  height: auto;
 }

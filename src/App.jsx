@@ -3,14 +3,15 @@ import SearchBar from "./components/SearchBar";
 import Accroche from "./components/Accroche";
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
+    <main>
+      <div className="container">
       <Accroche/>
       <CarteList/>
-      <SearchBar/>
-    </div>
+      </div>
+    </main>
+    
   );
 }
 
-export default App;

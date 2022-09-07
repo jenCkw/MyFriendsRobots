@@ -1,15 +1,45 @@
+import React, {  useState, useEffect, useMemo } from "react";
+import SearchBar from "../SearchBar";
+import CarteRobot from "../CarteRobot";
 
-import React, { useState } from "react";
 import "./style.css";
-export default function SearchBar({ value, onChange }) {
+
+export default function CarteList() {
+  const [robots, setRobots] = useState([]);
+  const [searchText, setSearchText] = useState("");
+
+  useEffect(() => {
+    const getRobots = async () => {
+      try {
+        const response = await fetch(
+          "https://jsonplaceholder.typicode.com/users"
+        );
+        const robots = await response.json();
+        setRobots(robots);
+      } catch (error) {
+        console.log("error", error);
+      }
+    };
+    getRobots();
+  }, []);
+
+  const filtredRobots = useMemo(() => {
+    if (robots?.length && searchText.length >= 3) {
+      return robots.filter((robot) =>
+        robot.name.toUpperCase().includes(searchText.toUpperCase())
+      );
+    }
+    return robots;
+  }, [robots, searchText]);
+
   return (
-    <div className="search-bar">
-      <input
-        type="text"
-        name="search"
-        placeholder="Rechercher par nom"
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-      />
-    </div>
-  );}
+    <>
+      <SearchBar value={searchText} onChange={setSearchText} />
+      <div className="list-container">
+        {filtredRobots?.map((robot) => (
+          <CarteRobot key={robot.id} robot={robot} />
+        ))}
+      </div>
+    </>
+  );
+}

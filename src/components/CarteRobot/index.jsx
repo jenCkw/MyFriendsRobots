@@ -4,9 +4,9 @@
 
  export default function CarteRobot({robot}) {
    return (
-     <div className="list-item">
-       <div className="avatar">
-         <img alt={robot.name} src={`https://robohash.org/${robot.id}`}></img>
+     <div className="list-robots">
+       <div className="robot-avatar">
+         <img alt={robot.name} src={`https://robohash.org/${robot.id}`}/>
        </div>
        <div className="robot-info">
          <p className="name"> {robot.name} </p>

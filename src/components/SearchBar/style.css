@@ -5,4 +5,11 @@ input {
   outline: none;
   padding: 1em;
   width: 300px;
+  
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

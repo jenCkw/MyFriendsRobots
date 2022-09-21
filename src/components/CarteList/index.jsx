@@ -1,4 +1,5 @@
-import React, {  useState, useEffect, useMemo } from "react";
+import { Link } from "react-router-dom";
+import React, { useState, useEffect, useMemo } from "react";
 import SearchBar from "../SearchBar";
 import CarteRobot from "../CarteRobot";
 
@@ -37,7 +38,9 @@ export default function CarteList() {
       <SearchBar value={searchText} onChange={setSearchText} />
       <div className="list-container">
         {filtredRobots?.map((robot) => (
-          <CarteRobot key={robot.id} robot={robot} />
+          <Link className="back-link" to={`/RobotsDetails/${robot.id}`}>
+            <CarteRobot key={robot.id} robot={robot} />
+          </Link>
         ))}
       </div>
     </>

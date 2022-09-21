@@ -20,7 +20,7 @@ main {
   align-items: center;
 } 
 
-.list-container {
+/* .list-container {
   width: 100%;
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -28,7 +28,7 @@ main {
   align-items: center;
   flex-direction: column;
   max-width: 1000px;
-}
+} */
 
 .container {
    justify-content: center;
@@ -36,3 +36,4 @@ main {
   flex-direction: column;
   max-width: 1000px;
 }
+ 

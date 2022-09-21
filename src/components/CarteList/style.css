@@ -1,8 +1,13 @@
-.list-container{
+.list-container {
   display: flex;
-  flex-direction: wrap;
+  flex-wrap: wrap;
+  gap: 40px 15px;
   justify-content: center;
   align-items: center;
-  gap: 38px 15px;
-  margin: 40px 0;
+  margin: 38px 0;
+  height: 100px;
+}
+
+.back-link{
+  text-decoration: none;
 }
